@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawtastic - Pet Basics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Left Panel -->
+    <div class="sidebar">
+      <div class="brand">
+        <div class="logo-circle">🐾</div>
+        <h2>Pawtastic</h2>
+      </div>
+
+      <ul class="steps">
+        <li class="step"><a href="human-profile.html">Human profile</a></li>
+        <li class="step active"><a href="pet-basics.html">Pet basics</a></li>
+        <li class="step"><a href="pet-details.html">Pet details</a></li>
+        <li class="step"><a href="confirm.html">Confirm</a></li>
+      </ul>
+
+      <img src="https://i.ibb.co/Z6MJqdh/dog.png" alt="Dog" class="dog-img" />
+      <a href="#" class="exit-link">Save and exit</a>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="form-section">
+      <h1>We love your pets! Give us the basics about your pet.</h1>
+      <form class="pet-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Pet's name" />
+          </div>
+
+          <div class="form-group upload">
+            <label>&nbsp;</label>
+            <button type="button" class="upload-btn">📷 Upload a photo</button>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" placeholder="Pet's breed" />
+          </div>
+
+          <div class="form-group">
+            <label for="birthday">Birthday</label>
+            <input type="text" id="birthday" placeholder="MM/DD/YYYY" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="option-group">
+              <button type="button" class="option selected">Female</button>
+              <button type="button" class="option">Male</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Spayed or Neutered</label>
+            <div class="option-group">
+              <button type="button" class="option selected">Yes</button>
+              <button type="button" class="option">No</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Weight</label>
+          <div class="option-group">
+            <button type="button" class="option selected">0–25 lbs</button>
+            <button type="button" class="option">25–50 lbs</button>
+            <button type="button" class="option">50–100 lbs</button>
+            <button type="button" class="option">100+ lbs</button>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="back-btn">Back</button>
+          <button type="submit" class="next-btn">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Human Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="brand">
+        <div class="logo-circle">🐾</div>
+        <h2>Pawtastic</h2>
+      </div>
+
+      <ul class="steps">
+        <li class="step active"><a href="human-profile.html">Human profile</a></li>
+        <li class="step"><a href="pet-basics.html">Pet basics</a></li>
+        <li class="step"><a href="pet-details.html">Pet details</a></li>
+        <li class="step"><a href="confirm.html">Confirm</a></li>
+      </ul>
+
+      <img src="https://i.ibb.co/Z6MJqdh/dog.png" alt="Dog" class="dog-img" />
+      <a href="#" class="exit-link">Save and exit</a>
+    </div>
+
+    <div class="form-section">
+      <h1>Let’s get to know you!</h1>
+      <form class="pet-form" action="pet-basics.html">
+        <div class="form-group">
+          <label for="owner-name">Your Name</label>
+          <input type="text" id="owner-name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="next-btn">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
