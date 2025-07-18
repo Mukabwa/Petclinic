@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Book Appointment - Pawtastic</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="book-appointment.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6ad5e.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Reuse the same sidebar structure -->
+    <aside class="app-sidebar">
+      <div class="sidebar-top">
+        <a href="dashboard.html" class="brand-link">
+          <div class="logo-circle">🐾</div>
+          <span class="brand-name">Pawtastic</span>
+        </a>
+        <nav class="side-nav">
+          <a class="nav-item" href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a>
+          <a class="nav-item active" href="book-appointment.html"><i class="fa-solid fa-calendar-plus"></i> <span>Book</span></a>
+          <a class="nav-item" href="services.html"><i class="fa-solid fa-list"></i> <span>Services</span></a>
+          <a class="nav-item" href="about.html"><i class="fa-solid fa-circle-info"></i> <span>About</span></a>
+          <a class="nav-item" href="contact.html"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a>
+          <div class="nav-item pets-toggle" id="petsToggle">
+            <i class="fa-solid fa-paw"></i> <span>Pets</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="pets-sub" id="petsSub">
+            <a href="pet-profile.html?pet=Bella" class="pet-link">Bella</a>
+            <a href="pet-profile.html?pet=Max" class="pet-link">Max</a>
+            <a href="pet-basics.html" class="pet-add">+ Add New Pet</a>
+          </div>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <a class="nav-item logout" href="index.html"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <header class="page-header">
+        <h1>Book an Appointment</h1>
+        <p>Select a pet, service, date, and time.</p>
+      </header>
+
+      <form class="book-form" action="dashboard.html" onsubmit="return handleSubmit()">
+        <label>Pet
+          <select required>
+            <option value="">Select pet</option>
+            <option>Bella</option>
+            <option>Max</option>
+          </select>
+        </label>
+
+        <label>Service
+          <select required>
+            <option value="">Select service</option>
+            <option>Vaccination</option>
+            <option>Check-up</option>
+            <option>Dental Cleaning</option>
+            <option>Surgery Consult</option>
+          </select>
+        </label>
+
+        <label>Date
+          <input type="date" required />
+        </label>
+
+        <div class="time-slot-section">
+          <h2>Select Time</h2>
+          <div class="time-slots">
+            <button type="button" class="slot">09:00</button>
+            <button type="button" class="slot">10:00</button>
+            <button type="button" class="slot">11:00</button>
+            <button type="button" class="slot">13:30</button>
+            <button type="button" class="slot">14:30</button>
+            <button type="button" class="slot">16:00</button>
+          </div>
+          <input type="hidden" name="time" id="selectedTime" required />
+        </div>
+
+        <div class="form-actions">
+          <a href="dashboard.html" class="back-btn">Cancel</a>
+          <button type="submit" class="next-btn">Book Appointment</button>
+        </div>
+      </form>
+    </main>
+  </div>
+<script>
+  // Sidebar pets toggle
+  document.getElementById('petsToggle').addEventListener('click',()=>{
+    document.getElementById('petsSub').classList.toggle('open');
+  });
+
+  // Time slot select
+  const slots = document.querySelectorAll('.slot');
+  const selectedInput = document.getElementById('selectedTime');
+  slots.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      slots.forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedInput.value = btn.textContent.trim();
+    });
+  });
+
+  function handleSubmit(){
+    if(!selectedInput.value){
+      alert('Please select a time slot.');
+      return false;
+    }
+    alert('Appointment booked (demo). Returning to dashboard.');
+    return true;
+  }
+</script>
+</body>
+</html>

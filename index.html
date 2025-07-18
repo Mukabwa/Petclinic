@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pawtastic Vet Clinic</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6ad5e.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-brand">
+        <div class="logo-circle">🐾</div>
+        <h1>Pawtastic Vet Clinic</h1>
+      </div>
+      <p class="hero-tagline">Caring for your pets with love, tech, and timely appointments.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="signup.html">Sign Up</a>
+        <a class="btn secondary" href="login.html">Log In</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="info-sections">
+    <section>
+      <h2>Easy Online Booking</h2>
+      <p>Reserve a time that works for you and avoid waiting at the clinic.</p>
+    </section>
+    <section>
+      <h2>Pet Profiles</h2>
+      <p>Store each pet’s details so repeat bookings are fast and accurate.</p>
+    </section>
+    <section>
+      <h2>Reminders</h2>
+      <p>Get notified so you never miss a vaccine, check-up, or procedure.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Pawtastic Vet Clinic. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
