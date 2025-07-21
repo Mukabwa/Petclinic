@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Pawtastic</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-top">
+        <a href="dashboard.html" class="brand-link">
+          <div class="logo-circle">🐾</div>
+          <span class="brand-name">Pawtastic</span>
+        </a>
+        <nav class="side-nav">
+          <a class="nav-item" href="dashboard.html"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a>
+          <a class="nav-item active" href="book-appointment.html"><i class="fa-solid fa-calendar-plus"></i> <span>Book</span></a>
+          <a class="nav-item" href="services.html"><i class="fa-solid fa-list"></i> <span>Services</span></a>
+          <a class="nav-item" href="about.html"><i class="fa-solid fa-circle-info"></i> <span>About</span></a>
+          <a class="nav-item" href="contact.html"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a>
+          <div class="nav-item pets-toggle" id="petsToggle">
+            <i class="fa-solid fa-paw"></i> <span>Pets</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="pets-sub" id="petsSub">
+            <a href="pet-profile.html?pet=Bella" class="pet-link">Bella</a>
+            <a href="pet-profile.html?pet=Max" class="pet-link">Max</a>
+            <a href="pet-basics.html" class="pet-add">+ Add New Pet</a>
+          </div>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <a class="nav-item logout" href="index.html"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1>Contact Us</h1>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> +254 700 123 456</p>
+        <p><strong>Email:</strong> info@pawtastic.com</p>
+        <p><strong>Address:</strong> Busia Town, Kenya</p>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
