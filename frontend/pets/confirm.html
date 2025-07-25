@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirm & Submit - Pawtastic Vet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/components.css">
+  <link rel="stylesheet" href="../assets/styles/confirm.css">
+  <script src="https://kit.fontawesome.com/a2e0e6ad5e.js" crossorigin="anonymous" defer></script>
+  <script src="../assets/scripts/main.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-top">
+        <div class="brand">
+          <div class="logo-circle">🐾</div>
+          <h2>Pawtastic</h2>
+        </div>
+        <button id="mobileMenuToggle" class="btn btn-secondary mobile-only">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="steps">
+          <li class="step">
+            <a href="../public/human-profile.html">Human profile</a>
+          </li>
+          <li class="step">
+            <a href="pet-basics.html">Pet basics</a>
+          </li>
+          <li class="step">
+            <a href="pet-details.html">Pet details</a>
+          </li>
+          <li class="step active">
+            <a href="confirm.html">Confirm</a>
+          </li>
+        </ul>
+
+        <img src="../assets/images/dog.png" alt="Dog" class="dog-img" />
+        <a href="#" class="exit-link">Save and exit</a>
+      </div>
+    </aside>
+
+    <!-- Main Section -->
+    <main class="app-main">
+      <h1>Review and Confirm</h1>
+      <p>Please review all the information you've provided before submitting. You can go back to make edits if needed.</p>
+
+      <div class="summary-card">
+        <h2>Pet Information Summary</h2>
+        <div class="summary-grid">
+          <div class="summary-group">
+            <h3>Basic Info</h3>
+            <ul>
+              <li><strong>Name:</strong> <span id="summary-name">Bella</span></li>
+              <li><strong>Breed:</strong> <span id="summary-breed">Golden Retriever</span></li>
+              <li><strong>Birthday:</strong> <span id="summary-birthday">05/12/2022</span></li>
+              <li><strong>Gender:</strong> <span id="summary-gender">Female</span></li>
+              <li><strong>Spayed/Neutered:</strong> <span id="summary-fixed">Yes</span></li>
+              <li><strong>Weight:</strong> <span id="summary-weight">55 lbs</span></li>
+            </ul>
+            <a href="pet-basics.html" class="btn btn-secondary">
+              Edit Basic Info
+            </a>
+          </div>
+
+          <div class="summary-group">
+            <h3>Health Details</h3>
+            <ul>
+              <li><strong>Medical Conditions:</strong> <span id="summary-conditions">None</span></li>
+              <li><strong>Medications:</strong> <span id="summary-meds">None</span></li>
+              <li><strong>Diet:</strong> <span id="summary-diet">Regular adult dog food</span></li>
+              <li><strong>Activity Level:</strong> <span id="summary-activity">Moderate</span></li>
+              <li><strong>Temperament:</strong> <span id="summary-temperament">Friendly, energetic</span></li>
+              <li><strong>Last Vet Visit:</strong> <span id="summary-lastvisit">06/15/2025</span></li>
+            </ul>
+            <a href="pet-details.html" class="btn btn-secondary">
+              Edit Health Details
+            </a>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary">
+            Back
+          </button>
+          <button type="submit" class="btn btn-primary">
+            Submit Registration
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // In a real app, you would pull these values from form submissions
+    // For demo purposes, we're using placeholder values
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const petName = urlParams.get('pet') || 'Bella';
+      
+      if (petName === 'Max') {
+        document.getElementById('summary-name').textContent = 'Max';
+        document.getElementById('summary-breed').textContent = 'Labrador';
+        document.getElementById('summary-gender').textContent = 'Male';
+        document.getElementById('summary-weight').textContent = '70 lbs';
+      }
+    });
+  </script>
+</body>
+</html>

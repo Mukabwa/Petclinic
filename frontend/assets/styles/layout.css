@@ -1,0 +1,115 @@
+/* App shell layout */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styles */
+.app-sidebar {
+  width: 240px;
+  background: var(--navy-dark);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.admin-sidebar {
+  width: 260px;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+/* Main content area */
+.app-main {
+  flex: 1;
+  padding: var(--space-xl);
+  overflow-y: auto;
+}
+
+.main-content {
+  padding: var(--space-xl);
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-shell {
+    flex-direction: column;
+  }
+  
+  .app-sidebar,
+  .admin-sidebar {
+    width: 100%;
+    padding: var(--space-md);
+  }
+  
+  .app-main,
+  .main-content {
+    padding: var(--space-md);
+  }
+}
+
+/* Login/Signup wrapper */
+.login-wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: var(--space-md);
+  margin: 0 auto;
+}
+
+.login-card {
+  padding: var(--space-xxl) var(--space-xl);
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: var(--space-xxl) var(--space-md) var(--space-xl);
+}
+
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* Info sections grid */
+.info-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto var(--space-xxl);
+  padding: 0 var(--space-md);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  color: var(--charcoal);
+  font-size: var(--font-size-sm);
+}

@@ -1,0 +1,48 @@
+/* Confirm Page Specific Styles */
+
+.summary-card {
+  background: var(--white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--space-md);
+}
+
+.summary-card h2 {
+  margin-top: 0;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.summary-group h3 {
+  margin-bottom: var(--space-md);
+  color: var(--slate-purple);
+}
+
+.summary-group ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--space-md);
+}
+
+.summary-group li {
+  margin-bottom: var(--space-sm);
+}
+
+.summary-group li strong {
+  display: inline-block;
+  min-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

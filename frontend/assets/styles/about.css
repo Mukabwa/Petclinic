@@ -1,0 +1,82 @@
+/* About Page Specific Styles */
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-intro {
+  margin-bottom: var(--space-xxl);
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about-intro p {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+.about-intro img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xxl);
+}
+
+.about-cards .card {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.about-cards i {
+  font-size: var(--font-size-xxl);
+  color: var(--slate-purple);
+  margin-bottom: var(--space-md);
+}
+
+.about-cards h2 {
+  margin-bottom: var(--space-md);
+}
+
+.about-founder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  align-items: center;
+  margin-top: var(--space-xxl);
+}
+
+.about-founder img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.founder-info h2 {
+  margin-bottom: var(--space-md);
+  color: var(--slate-purple);
+}
+
+.founder-info p {
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .about-intro {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .about-intro p {
+    order: 1;
+  }
+  
+  .about-intro img {
+    order: 2;
+  }
+}

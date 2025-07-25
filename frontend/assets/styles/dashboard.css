@@ -1,0 +1,127 @@
+/* User Dashboard Specific Styles */
+
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: var(--font-size-xxl);
+}
+
+.current-pet {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+.current-pet select {
+  min-width: 120px;
+}
+
+/* Action Cards */
+.main-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.action-card {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+}
+
+.action-card i {
+  font-size: var(--font-size-xxl);
+  color: var(--slate-purple);
+  margin-bottom: var(--space-md);
+}
+
+.action-card h3 {
+  margin: 0;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-md);
+}
+
+.appt-list {
+  list-style: none;
+  margin: var(--space-md) 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.appt-list li {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--blush-pink);
+  border-radius: var(--radius-md);
+}
+
+.appt-list span {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--charcoal);
+  opacity: 0.7;
+}
+
+/* Mini Calendar */
+.mini-cal {
+  width: 100%;
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-xs);
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+
+.cal-grid div {
+  padding: var(--space-xs) 0;
+  border-radius: var(--radius-sm);
+}
+
+.cal-grid div.open {
+  background: var(--light-pink);
+  cursor: pointer;
+}
+
+.cal-grid div.open:hover {
+  background: var(--slate-purple);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .main-actions {
+    flex-direction: column;
+  }
+  
+  .action-card {
+    width: 100%;
+  }
+}

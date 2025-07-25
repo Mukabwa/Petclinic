@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Login - Pawtastic</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/components.css">
+  <link rel="stylesheet" href="../assets/styles/login.css">
+  <script src="https://kit.fontawesome.com/a2e0e6ad5e.js" crossorigin="anonymous" defer></script>
+  <script src="../assets/scripts/main.js" defer></script>
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="card login-card">
+      <div class="logo-circle">🐾</div>
+      <h1>Welcome Back</h1>
+      <p>Log in to manage your pets and appointments.</p>
+      
+      <form action="dashboard.html" method="GET" class="login-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required 
+                 placeholder="you@example.com" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required 
+                 placeholder="••••••••" class="form-control">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">
+          Log In
+        </button>
+      </form>
+      
+      <p class="alt">
+        No account? <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

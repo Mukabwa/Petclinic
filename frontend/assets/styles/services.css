@@ -1,0 +1,49 @@
+/* Services Page Specific Styles */
+
+.subtitle {
+  margin-bottom: var(--space-xl);
+  color: var(--charcoal);
+  opacity: 0.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.service-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card i {
+  font-size: var(--font-size-xxl);
+  color: var(--slate-purple);
+  margin-bottom: var(--space-md);
+}
+
+.service-card h2 {
+  margin: 0 0 var(--space-sm);
+}
+
+.service-card p {
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.service-meta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.service-meta span {
+  font-weight: var(--font-weight-bold);
+}
+
+.service-meta .price {
+  color: var(--slate-purple);
+}

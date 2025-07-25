@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Profile - Pawtastic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/components.css">
+  <link rel="stylesheet" href="../assets/styles/pet-profile.css">
+  <script src="https://kit.fontawesome.com/a2e0e6ad5e.js" crossorigin="anonymous" defer></script>
+  <script src="../assets/scripts/main.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-top">
+        <a href="../public/dashboard.html" class="brand-link">
+          <div class="logo-circle">🐾</div>
+          <span class="brand-name">Pawtastic</span>
+        </a>
+        <button id="mobileMenuToggle" class="btn btn-secondary mobile-only">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="side-nav">
+          <a class="nav-item" href="../public/dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+          <a class="nav-item" href="../services/book-appointment.html">
+            <i class="fa-solid fa-calendar-plus"></i>
+            <span>Book</span>
+          </a>
+          <a class="nav-item" href="../services/services.html">
+            <i class="fa-solid fa-list"></i>
+            <span>Services</span>
+          </a>
+          <a class="nav-item" href="../about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>About</span>
+          </a>
+          <a class="nav-item" href="../contact.html">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+          <div class="nav-item pets-toggle" id="petsToggle">
+            <i class="fa-solid fa-paw"></i>
+            <span>Pets</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="pets-sub" id="petsSub">
+            <a href="pet-profile.html?pet=Bella" class="pet-link">
+              Bella
+            </a>
+            <a href="pet-profile.html?pet=Max" class="pet-link">
+              Max
+            </a>
+            <a href="pet-basics.html" class="pet-add">
+              + Add New Pet
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <a class="nav-item logout" href="../public/index.html">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="app-main">
+      <header class="profile-header">
+        <div class="pet-photo">
+          <img src="../assets/images/dog-placeholder.jpg" alt="Pet Photo">
+          <button class="btn btn-secondary">
+            <i class="fa-solid fa-camera"></i> Change Photo
+          </button>
+        </div>
+        <div class="pet-info">
+          <h1 id="petName">Bella</h1>
+          <div class="pet-meta">
+            <span><strong>Breed:</strong> <span id="petBreed">Golden Retriever</span></span>
+            <span><strong>Age:</strong> <span id="petAge">3 years</span></span>
+            <span><strong>Gender:</strong> <span id="petGender">Female</span></span>
+          </div>
+        </div>
+      </header>
+
+      <section class="pet-details">
+        <div class="card">
+          <h2>Health Information</h2>
+          <ul class="detail-list">
+            <li><strong>Weight:</strong> 55 lbs</li>
+            <li><strong>Last Visit:</strong> June 15, 2025</li>
+            <li><strong>Vaccinations:</strong> Up to date</li>
+            <li><strong>Medical Conditions:</strong> None</li>
+          </ul>
+          <a href="pet-details.html" class="btn btn-primary">
+            Edit Health Info
+          </a>
+        </div>
+
+        <div class="card">
+          <h2>Upcoming Appointments</h2>
+          <ul class="appt-list">
+            <li>
+              <strong>Vaccination</strong>
+              <span>Aug 05, 2025 @ 10:00</span>
+            </li>
+          </ul>
+          <a href="../services/book-appointment.html" class="btn btn-primary">
+            Book New Appointment
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Get pet name from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const petName = urlParams.get('pet') || 'Bella';
+    
+    // Update page with pet info
+    document.getElementById('petName').textContent = petName;
+    
+    // Demo: Different pets have different info
+    if (petName === 'Max') {
+      document.getElementById('petBreed').textContent = 'Labrador';
+      document.getElementById('petAge').textContent = '5 years';
+      document.getElementById('petGender').textContent = 'Male';
+    }
+  </script>
+</body>
+</html>

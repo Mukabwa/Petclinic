@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sign Up - Pawtastic</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/components.css">
+  <link rel="stylesheet" href="../assets/styles/signup.css">
+  <script src="https://kit.fontawesome.com/a2e0e6ad5e.js" crossorigin="anonymous" defer></script>
+  <script src="../assets/scripts/main.js" defer></script>
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="card login-card">
+      <div class="logo-circle">🐾</div>
+      <h1>Create Account</h1>
+      <p>Join Pawtastic to manage your pet's health records.</p>
+      
+      <form action="human-profile.html" method="GET" class="login-form">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required 
+                 placeholder="Your name" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required 
+                 placeholder="you@example.com" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required 
+                 placeholder="••••••••" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required 
+                 placeholder="••••••••" class="form-control">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">
+          Create Account
+        </button>
+      </form>
+      
+      <p class="alt">
+        Already have an account? <a href="login.html">Log In</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

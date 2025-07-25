@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Pawtastic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/base.css">
+  <link rel="stylesheet" href="./assets/styles/layout.css">
+  <link rel="stylesheet" href="./assets/styles/components.css">
+  <link rel="stylesheet" href="./assets/styles/about.css">
+  <script src="https://kit.fontawesome.com/a2e0e6ad5e.js" crossorigin="anonymous" defer></script>
+  <script src="./assets/scripts/main.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-top">
+        <a href="public/dashboard.html" class="brand-link">
+          <div class="logo-circle">🐾</div>
+          <span class="brand-name">Pawtastic</span>
+        </a>
+        <button id="mobileMenuToggle" class="btn btn-secondary mobile-only">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="side-nav">
+          <a class="nav-item" href="public/dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+          <a class="nav-item" href="services/book-appointment.html">
+            <i class="fa-solid fa-calendar-plus"></i>
+            <span>Book</span>
+          </a>
+          <a class="nav-item" href="services/services.html">
+            <i class="fa-solid fa-list"></i>
+            <span>Services</span>
+          </a>
+          <a class="nav-item active" href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>About</span>
+          </a>
+          <a class="nav-item" href="contact.html">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+          <div class="nav-item pets-toggle" id="petsToggle">
+            <i class="fa-solid fa-paw"></i>
+            <span>Pets</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="pets-sub" id="petsSub">
+            <a href="pets/pet-profile.html?pet=Bella" class="pet-link">
+              Bella
+            </a>
+            <a href="pets/pet-profile.html?pet=Max" class="pet-link">
+              Max
+            </a>
+            <a href="pets/pet-basics.html" class="pet-add">
+              + Add New Pet
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <a class="nav-item logout" href="public/index.html">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="app-main">
+      <h1>About Pawtastic</h1>
+      <div class="about-content">
+        <div class="about-intro">
+          <p>Pawtastic is a modern veterinary clinic founded by Dan Otieno, dedicated to offering the best care for your pets. Our mission is to ensure every pet in Busia is healthy, happy, and loved.</p>
+          <img src="./assets/images/clinic.jpg" alt="Pawtastic Clinic">
+        </div>
+
+        <div class="about-cards">
+          <div class="card">
+            <i class="fa-solid fa-heart"></i>
+            <h2>Our Mission</h2>
+            <p>To provide professional veterinary services with love and care, using the latest technology to ensure your pets receive the best possible treatment.</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-star"></i>
+            <h2>Our Values</h2>
+            <p>Compassion, integrity, and excellence in pet care. We treat every animal as if they were our own.</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h2>Our Team</h2>
+            <p>Highly trained veterinarians and staff who are passionate about animal health and wellbeing.</p>
+          </div>
+        </div>
+
+        <div class="about-founder">
+          <img src="./assets/images/dan.jpg" alt="Dan Otieno">
+          <div class="founder-info">
+            <h2>Meet Dr. Dan Otieno</h2>
+            <p>With over 10 years of veterinary experience, Dr. Otieno founded Pawtastic to bring modern, compassionate care to Busia's pets. He specializes in preventive care and surgery.</p>
+            <p>When not at the clinic, Dan enjoys hiking with his rescue dogs, Bella and Max.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

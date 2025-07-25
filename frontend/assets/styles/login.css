@@ -1,0 +1,35 @@
+/* Login/Signup Specific Styles */
+
+.login-card {
+  text-align: center;
+}
+
+.login-card h1 {
+  margin-bottom: var(--space-sm);
+}
+
+.login-card p {
+  margin-bottom: var(--space-xl);
+  color: var(--charcoal);
+  opacity: 0.8;
+}
+
+.login-form {
+  display: grid;
+  gap: var(--space-md);
+  margin: var(--space-xl) 0 var(--space-md);
+}
+
+.alt {
+  font-size: var(--font-size-sm);
+  color: var(--charcoal);
+}
+
+.alt a {
+  color: var(--slate-purple);
+  font-weight: var(--font-weight-bold);
+}
+
+.alt a:hover {
+  text-decoration: underline;
+}
