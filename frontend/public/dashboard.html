@@ -148,6 +148,31 @@
     document.getElementById('petsToggle').addEventListener('click', () => {
       document.getElementById('petsSub').classList.toggle('open');
     });
+
+    async function loadDashboardData() {
+    try {
+        // Load pets
+        const pets = await api.request('/pets');
+        const petSelect = document.getElementById('petSelect');
+        petSelect.innerHTML = pets.map(pet => 
+            `<option value="${pet.id}">${pet.name}</option>`
+        ).join('');
+        
+        // Load appointments
+        const appointments = await api.request('/appointments');
+        const apptList = document.querySelector('.appt-list');
+        apptList.innerHTML = appointments.map(appt => `
+            <li>
+                <strong>${appt.petName}</strong> – ${appt.serviceName}
+                <span>${new Date(appt.date).toLocaleDateString()} @ ${appt.time}</span>
+            </li>
+        `).join('');
+    } catch (error) {
+        console.error('Dashboard load error:', error);
+    }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadDashboardData);
   </script>
 </body>
 </html>

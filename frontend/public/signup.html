@@ -55,5 +55,20 @@
       </p>
     </div>
   </div>
+
+  <script>
+    document.querySelector('.login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    
+    try {
+        const { name, email, password } = Object.fromEntries(formData);
+        const user = await api.signup(name, email, password);
+        window.location.href = 'dashboard.html';
+    } catch (error) {
+        alert('Signup failed: ' + (error.message || 'Please try again'));
+    }
+    });
+  </script>
 </body>
 </html>

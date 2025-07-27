@@ -181,6 +181,34 @@
       alert('Appointment booked (demo). Returning to dashboard.');
       return true;
     }
+
+    async function initBookingPage() {
+    try {
+        // Load pets
+        const pets = await api.request('/pets');
+        const petSelect = document.getElementById('petSelect');
+        petSelect.innerHTML = '<option value="">Select pet</option>' + 
+            pets.map(pet => `<option value="${pet.id}">${pet.name}</option>`).join('');
+        
+        // Load services
+        const services = await api.request('/services');
+        const serviceSelect = document.getElementById('serviceSelect');
+        serviceSelect.innerHTML = '<option value="">Select service</option>' +
+            services.map(svc => `<option value="${svc.id}">${svc.name}</option>`).join('');
+        
+        // Load available slots
+        const today = new Date().toISOString().split('T')[0];
+        const { availableSlots } = await api.request(`/appointments/slots?date=${today}`);
+        const slotsContainer = document.querySelector('.time-slots');
+        slotsContainer.innerHTML = availableSlots.map(slot => 
+            `<button type="button" class="btn slot" data-time="${slot}">${slot}</button>`
+        ).join('');
+    } catch (error) {
+        console.error('Booking init error:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', initBookingPage);
   </script>
 </body>
 </html>

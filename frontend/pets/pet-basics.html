@@ -115,5 +115,28 @@
       </form>
     </main>
   </div>
+
+  <script>
+    document.querySelector('.pet-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    
+    try {
+        const petData = {
+            name: formData.get('name'),
+            breed: formData.get('breed'),
+            birthday: formData.get('birthday'),
+            gender: document.querySelector('.option.selected').textContent,
+            weight: document.querySelector('.option-group.weight .selected').textContent,
+            fixed: document.querySelector('.option-group.fixed .selected').textContent === 'Yes'
+        };
+        
+        const pet = await api.request('/pets', 'POST', petData);
+        window.location.href = `pet-details.html?petId=${pet.id}`;
+    } catch (error) {
+        alert('Error saving pet: ' + (error.message || 'Please try again'));
+    }
+});
+  </script>
 </body>
 </html>

@@ -43,5 +43,20 @@
       </p>
     </div>
   </div>
+
+  <script>
+    document.querySelector('.login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    
+    try {
+        const { email, password } = Object.fromEntries(formData);
+        const user = await api.login(email, password);
+        window.location.href = 'dashboard.html';
+    } catch (error) {
+        alert('Login failed: ' + (error.message || 'Invalid credentials'));
+    }
+    });
+  </script>
 </body>
 </html>
